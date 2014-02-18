@@ -1212,13 +1212,13 @@ module.provider('Restangular', function() {
 
                  var createdFunction = function(params, headers, elem) {
                      var callParams = _.defaults({
-                         params: params,
-                         headers: headers,
-                         elem: elem
-                     }, {
                          params: defaultParams,
                          headers: defaultHeaders,
                          elem: defaultElem
+                     }, {
+                         params: params,
+                         headers: headers,
+                         elem: elem
                      });
                      return bindedFunction(callParams.params, callParams.headers, callParams.elem);
                  };
